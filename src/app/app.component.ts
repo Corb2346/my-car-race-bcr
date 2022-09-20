@@ -15,54 +15,77 @@ export class AppComponent {
     this.crearCarrera();
     this.arrayAndObjectsAutos();
     this.arrayAnObjectsPilotos();
-
   }
 
   arrayAndObjectsAutos(){
-    const autoUno : Autos = {
+    const autos : Autos[] = [{
       numeroAuto : 1,
       color : 'blue',
       distanciaRecorrida : 0,
       status : 'detenido',
-      piloto : 'pilotoName1'
-    };
+      piloto : 1
+    },
+    {
+      numeroAuto : 2,
+      color : 'green',
+      distanciaRecorrida : 0,
+      status : 'detenido',
+      piloto : 2
+    },  
+    {
+      numeroAuto : 3,
+      color : 'red',
+      distanciaRecorrida : 0,
+      status : 'detenido',
+    }];
 
-    this.arrancar(autoUno);
+    /*this.arrancar(autoUno);
     let distancia = this.actalizarDistancia();
     autoUno.distanciaRecorrida = distancia;
     
     this.detener(autoUno);
 
-    console.log(distancia);
+    console.log(distancia);*/
     
-    console.log(autoUno);
+    console.log(autos);
 
   }
 
-  arrayAnObjectsPilotos(){
+  arrayAnObjectsPilotos():Pilotos[]{
 
-    const pilotoUno : Pilotos = {
+    const pilotos : Pilotos[] = [{
       idPiloto :1,
       nombrePiloto :'piloto1Nombre',
       apellidosPiloto : 'ApellidosPilotoUno',
-      NACIONALIDAD : 'NacionalidadPiloto1'
-    }
-    console.log(pilotoUno);
+      NACIONALIDAD : 'NacionalidadPilotoUno'
+    },
+    {
+      idPiloto :2,
+      nombrePiloto :'piloto2Nombre',
+      apellidosPiloto : 'ApellidosPilotoDos',
+      NACIONALIDAD : 'NacionalidadPilotoDos'
+    },
+    {
+      idPiloto :3,
+      nombrePiloto :'piloto3Nombre',
+      apellidosPiloto : 'ApellidosPilotoTres',
+      NACIONALIDAD : 'NacionalidadPilotoTres'
+    }];
+    console.log(pilotos);
+    return pilotos;
+    
   }
 
   crearCarrera(){
 
     const carreraUno : Carrera = {
-    listaCompetidores: [] = ['competidor','competidor2'],
+    listaCompetidores: [] = ['competidor1','competdiro2'],
     vueltas: 3,
     distanciaKmVueltas: 5,
     status:'nueva'
     }
     console.log(carreraUno);
   }
-
- 
-  
 
   arrancar(auto : Autos):void{
     auto.status = 'avanzando';
@@ -81,7 +104,7 @@ export class AppComponent {
 
 
   iniciarCarrea(){
-console.log('ya sirce iniviciar carrera');
+    console.log('ya sirce iniviciar carrera');
   }
 
   

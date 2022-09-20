@@ -3,6 +3,6 @@ export interface Autos {
     color : string,
     distanciaRecorrida : number,
     status : string
-    piloto? : string
+    piloto? : number
    
 }
